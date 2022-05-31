@@ -1,8 +1,8 @@
 /* Set the font-family for the entire body to Roboto with a generic family of sans-serif */
 /* Hint: https://developer.mozilla.org/en-US/docs/Web/CSS/font-family */
 body {
-  font-family: 'Roboto', 'sans-serif';
-  margin: 0
+  font-family: "Roboto", "sans-serif";
+  margin: 0;
 }
 
 header {
@@ -14,13 +14,12 @@ header {
   Hint: https://developer.mozilla.org/en-US/docs/Web/CSS/align-items
   */
 
-  height: 4rem;
+  height: 5rem;
   background-color: #4584b1;
   color: #fff;
   font-size: 2rem;
   display: flex;
   align-items: center;
-
 }
 
 #logo {
@@ -36,9 +35,6 @@ nav {
   background-color: #103594;
   height: 4rem;
   display: flex;
-  gap: 2rem;
-
-
 }
 
 nav ul {
@@ -58,11 +54,10 @@ nav ul {
   - margin-right
 */
 
-
 /* Create a block that targets all of the <a> elements that are children of <li> elements in the <nav>  */
 /* Give them a color of #fff and text-decoration of none */
 
-nav>ul>li>a {
+nav > ul > li > a {
   color: white;
   display: flex;
   justify-content: space-between;
@@ -71,7 +66,6 @@ nav>ul>li>a {
   display: inline-block;
   padding: 0.5rem;
 }
-
 
 /* Create another block that targets all of the <a> elements that are children of <li> elements in the <nav>  */
 /* Use the :hover pseudo-class to add an underline on hover */
@@ -85,16 +79,14 @@ a:hover {
 /* Hint: https://developer.mozilla.org/en-US/docs/Web/CSS/padding */
 
 .where-togo {
-  background-color: #040E27;
+  background-color: #040e27;
   padding: 1rem;
-
-
 }
 
 /* Create a block that targets the <h3> child of the where-togo class  */
 /* Use the font-size and color properties to style the <h3> element */
 
-.where-togo>h3 {
+.where-togo > h3 {
   color: white;
   font-size: 2rem;
 }
@@ -110,18 +102,33 @@ a:hover {
 
 /* Notice that each form input is wrapped in a div */
 /* Create a block that targets the input-field class and apply a suitable width and margin */
+.input-field {
+  width: 100px;
+  margin: 10px;
+  margin-right: 100px;
+}
 
 /* Styling the elements of Forms is difficult. */
 /* Hint: https://developer.mozilla.org/en-US/docs/Learn/Forms/Advanced_form_styling */
 
 input {
   /* Style the form input elements using width, height, padding-left and border-radius */
+  width: 180px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .nice-select {
   /* Select elements are not imput elements! Therefore we've given the <select> element it's own class  */
   /* They are notoriously difficult to style with css */
   /* In this case you can use width, height, font-size, color, border and border-radius */
+  width: 180px;
+  height: 52px;
+  font-size: 14px;
+  color: #8e8e8e;
+  border-color: #040e27;
+  border-radius: 5px;
 }
 
 .search-btn {
@@ -137,11 +144,25 @@ input {
   - border-radius
   - cursor
   */
+  background-color: #fe4a52;
+  color: #fff;
+  font-size: 14px;
+  height: 52px;
+  width: 120px;
+  border-color: #040e27;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .container {
   /* The destinations are enclosed in an article element that we want to make a grid */
   /* Set the display property to 'grid' and justify the content */
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-areas:
+    "single-destination single-destination single-destination"
+    "single-destination single-destination single-destination";
 }
 
 .row {
@@ -149,11 +170,15 @@ input {
   /* Use the grid-template-columns property to set each column to 30% */
   /* You can experiment with different units for the width values */
   /* Hint: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns */
+  grid-template-columns: 30%;
+  width: 80%;
 }
 
 .section-title {
   /* The <div> with class section-title contains an <h3> child which we want to center */
   /* The easiest way to center child elements is to set the display property to 'flex' and justify the content */
+  display: flex;
+  justify-content: center;
 }
 
 .single-destination {
@@ -161,40 +186,60 @@ input {
   /* Set the overflow to 'hidden' */
   /* The overflow CSS shorthand property sets the desired behaviour for an element's overflow 
     — i.e. when an element's content is too big to fit. In this case, the image is too big too fit. */
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  margin: 10px;
+  overflow: hidden;
 }
 
 img {
   /* Set the max-width property to 100% */
+  max-width: 100%;
 }
 
 /* Let's take the training wheels off. Finish off the page by adding styles to the remaining blocks */
 
 .testimonial-area {
-  /* Write your code here */
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-areas: "single-testmonial single-testmonial single-testmonial";
+  background-color: #383f50;
 }
 
 .single-testmonial {
-  /* Write your code here */
+  background-color: #f0f9fe;
+  border-radius: 5px;
+  padding: 50px;
+  margin: 30px;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
 }
 
 .footer {
-  /* Write your code here */
+  background-color: #040e27;
+  color: #fff;
+  display: grid;
+  grid-template-areas: "footer-widget footer-widget";
+  grid-template-columns: 70%;
+  padding: 50px;
 }
 
 .footer-widget p {
-  /* Write your code here */
+  color: #aab1b6;
 }
 
 .footer-widget a:hover {
-  /* Write your code here */
+  color: white;
 }
 
 .footer-widget ul li {
-  /* Write your code here */
+  padding: 10px;
 }
 
 .footer-widget a {
-  /* Write your code here */
+  color: #aab1b6;
 }
 
 /* Media Queries */
