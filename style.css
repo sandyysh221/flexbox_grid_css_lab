@@ -159,12 +159,7 @@ input {
   /* Set the display property to 'grid' and justify the content */
   display: grid;
   justify-content: center;
-  place-items: center;
-  grid-template-areas:
-    "single-destination single-destination single-destination"
-    "single-destination single-destination single-destination"
-    "single-destination single-destination single-destination"
-    "single-destination single-destination single-destination";
+  width: 65%;
 }
 
 .row {
@@ -172,8 +167,8 @@ input {
   /* Use the grid-template-columns property to set each column to 30% */
   /* You can experiment with different units for the width values */
   /* Hint: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns */
-  grid-template-columns: repeat(3, auto);
-  width: 100%;
+  grid-template-columns: 30% 30% 30%;
+  margin: auto;
 }
 
 .section-title {
@@ -188,11 +183,8 @@ input {
   /* Set the overflow to 'hidden' */
   /* The overflow CSS shorthand property sets the desired behaviour for an element's overflow 
     — i.e. when an element's content is too big to fit. In this case, the image is too big too fit. */
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  margin: 5px;
   overflow: hidden;
+  margin: 5px;
 }
 
 img {
@@ -224,9 +216,7 @@ img {
 .footer {
   background-color: #040e27;
   color: #fff;
-  display: grid;
-  grid-template-areas: "footer-widget footer-widget footer-widget";
-  grid-template-columns: repeat(3, auto);
+  position: relative;
   padding: 40px;
 }
 
